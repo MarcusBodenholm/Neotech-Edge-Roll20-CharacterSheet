@@ -1,26 +1,29 @@
 <div>
 	<!-- Set up the Tabs -->
-	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Karaktärsinfo" checked="checked"/> 
-	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>Basinfo</span>
-	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Edges, Triqs & Trippss" /> 
-	<span class="sheet-tab sheet-tab2" style='line-height: 20px;'>EDGES, TRIQS & TRIPPS</span>
-	<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Eqip" /> 
-	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>EQIP</span>
-	<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Trauma" /> 
+	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basinfo" checked="checked"/> 
+	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>BASINFO</span>
+	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Hacking & Triqs"/> 
+	<span class="sheet-tab sheet-tab2" style='line-height: 20px;'>HACKING & TRIQS</span>
+	<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Eqip"/> 
+	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>EQIP & VAPEN</span>
+	<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Trauma"/> 
 	<span class="sheet-tab sheet-tab4" style='line-height: 40px;'>TRAUMA</span>
 	
 	<input type="checkbox" class="sheet-hideArcanum" name="attr_ArcanumTab" style="width: 15px; display: none;">
-	<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Eekonomi & DOWNTIME" /> 
+	<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Ekonomi & Downtime" /> 
 	<span class="sheet-tab sheet-tab5" style='line-height: 20px;'>EKONOMI & DOWNTIME</span>
 	
 	<input type="radio" class="sheet-tab sheet-tab6" name="attr_core-tab" value="6" title="All rolls on one page" /> 
 	<span class="sheet-tab sheet-tab6" style='line-height: 40px;'>ALL ROLLS</span>
 	<!-- End Tab setup -->
+
 <!--- Below this is the general page    --->
     <div class="sheet-section-general">
 	    <div>
 	        <br>
-	        <h2>Karaktärsinfo</h2>
+	        <div class="economypage">
+	            <h2 class="whitetext">Karaktärsinformation</h2>
+	        </div>
 	        <br>
 	        <div class="charactercontainer">
 	            <div class="nameage">
@@ -32,7 +35,7 @@
                         <p><b>Stilar: </b><input class="stylepersonality" type="text" name="attr_styles"/></p>
                     </div>
                     <div class="flexname">
-                        <p><b>Personalitet: </b><input class="stylepersonality" type="text" name="attr_personality"/></p>
+                        <p><b>Personlighet: </b><input class="stylepersonality" type="text" name="attr_personality"/></p>
                     </div>
                 </div>
                 <div class="lifehealtsphere">
@@ -51,7 +54,7 @@
                         </p>
                     </div>    
                     <div class="lifehealth">
-                        <p> <b>Sfär: </b>
+                        <p> <b>Sphere: </b>
                             <select class="generation2" name="attr_sphere">
                                 <option>Amoks</option>
                                 <option>Anons</option>
@@ -80,7 +83,7 @@
                     <div class="lifehealth">
                         <p><b>Försäkring: </b>
                             <select class="generation2" name="attr_healthinsurance">
-                                <option>None</option>
+                                <option>Ingen</option>
                                 <option>Basic</option>
                                 <option>Pro</option>
                                 <option>Platinum</option>
@@ -102,7 +105,7 @@
             <br>
             <div class="3colrow">
                 <div class="col">
-                    <h3>Strid</h3>
+                    <h4 class="whitetext">Combat</h4>
                     <p>Initiativ: 
                         <input class="combattext" type="number" name="attr_initiative"/> 
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{initiative} + ?{Modifier|0} + @{rollmodifier}" name="roll_initiative"></button> 
@@ -128,7 +131,7 @@
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{shock} + ?{Modifier|0}" name="roll_shock"></button> 
                     </p>
                     <br>
-                    <h3>Misc</h3>
+                    <h4 class="whitetext">Misc</h4>
                     <p class="misc">Tripp: 
                         <input class="combattext" type="number" name="attr_tripp"/>
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{tripp} + ?{Modifier|0}" name="roll_tripp"></button>
@@ -147,11 +150,11 @@
                     <br>
                 </div>
                 <div class="col">
-                    <h3>Flow</h3>
+                    <h4 class="whitetext">Flow</h4>
                     <p>Flow: 
                         <input class="flowbox" type="number" name="attr_flow" value="12" />
                     </p>
-                    <p>Använt: 
+                    <p>Använd: 
                         <input class="flowbox" type="number" name="attr_used-flow" value="0"/>
                     </p>
                     <p>Stress: 
@@ -170,7 +173,7 @@
                     </p>
                 </div>
                 <div class="col">
-                    <h3>Attribut</h3>
+                    <h4 class="whitetext">Attribut</h4>
                     <p class="attribute2">Flex: 
                         <input class="attribute" type="number" name="attr_flex"/>
                         <button class="attributeroll" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{flex} + ?{Modifier|0} + @{rollmodifier}" name="roll_flex"></button>
@@ -214,18 +217,125 @@
                 </div>
             </div>
 	    </div>
-	    <div class="row">
-            <h2 class="economypage">Nätverk</h2>
-        </div>
-        <div class="flexcontainer3">
-            <h3>Nätverk</h3>
-            <h3>Kontakt</h3>
-            <h3>Domän</h3>
-            <h3>Nivå</h3>
-            <h3>Status</h3>
+        <div>
+            <span>Göm Edge & Nätverk</span>
+            <input class="sheet-hidenetworks" type="checkbox"/>
+            <br>
+            <div class="sheet-networks 2colrow">
+                <div class="sheet-networks col">
+                    <br>
+                    <h4 class="whitetext">Edge</h4>
+                        <fieldset class="repeating_edges"> 
+                            <p><input class="edgebox" type="text" name="attr_edgename" placeholder="Edge namn"/> 
+                            <span>Level: <input type="number" name="attr_edgelevel"/></span> 
+                            <span>Lager: <input type="number" name="attr_edgelayer"/></span>
+                            </p>
+                        </fieldset>
+                </div>
+                <div class="sheet-networks col">
+                    <br>
+                    <div class="tripflexcontainer">
+                        <div class="trip1">
+                            <h4 class="whitetext">Sug</h4>
+                        </div>
+                        <div class="trip2">
+                            <h4 class="whitetext">Trippar</h4>
+                        </div>
+                        <div class="trip3">
+                            <h4 class="whitetext">Status</h4>
+                        </div>
+                    </div>
+                    <div class="tripflexcontainer2">
+                        <fieldset class="repeating_desires">
+                            <input class="trip1" type="text" name="attr_desire1" placeholder="Sug"/>
+                            <input class="trip2" type="text" name="attr_tripname"/>
+                            <select class="trip3" name="attr_tripstatus">
+                                <option>Ny</option>
+                                <option>Använd</option>
+                                <option>Sliten</option>
+                                <option>Utbränd</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+	        <div class="sheet-networks row">
+                <h3 class="economypage whitetext">Nätverk</h3>
+            </div>
+            <div class="sheet-networks flexcontainer3">
+                <div class="networkheadline"><h4 class="whitetext">Nätverk</h4></div>
+                <div class="networkheadline"><h4 class="whitetext">Kontakt</h4></div>
+                <div class="networkheadline"><h4 class="whitetext">Domän</h4></div>
+                <div class="networkheadline"><h4 class="whitetext">Level</h4></div>
+                <div class="networkheadline"><h4 class="whitetext">Status</h4></div>
+            </div>
+            <div class="sheet-networks">
+                <div class="sheet-networks row">
+                    <fieldset class="repeating_network">
+                        <input class="network" type="text" name="attr_networkname"/>
+                        <input class="network" type="text" name="attr_contactname"/>
+                        <input class="network" type="text" name="attr_domainname"/>
+                        <select class="network2" name="attr_networklevel">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>                    
+                        <select class="network2" name="attr_contactstatus">
+                            <option>OK</option>
+                            <option>Använd</option>
+                            <option>Missbrukad</option>
+                        </select>       
+                    </fieldset>
+                </div>
+            </div>
         </div>
         <div>
-            <div class="row">
+            <br>
+            <span>Göm CV & Ungdom: </span> 
+            <input class="sheet-showcv" type="checkbox"/>
+            <br>
+	        <div class="sheet-cv row">
+	            <h4 class="whitetext">CV</h4>
+                    <fieldset class="repeating_contract">
+                        <p><input class="edgebox" type="text" name="attr_contractname" placeholder="Kontrakt"/></p>
+                        <p><textarea class="experience" name="attr_contractexperience" placeholder="Kontrakserfarenhet"></textarea></p>
+                    </fieldset>
+	        </div>
+	        <br>
+	        <div class="sheet-cv row">
+	            <h4 class="whitetext">Ungdom</h4>
+                    <p> Ungdomens nivå: 
+                        <select class="generation" name="attr_youthlevel">
+                            <option>Shacker</option>
+                            <option>Wageslave</option>
+                            <option>Pro</option>
+                            <option>Paladin</option>
+                        </select></p>
+                    <textarea class="experience" name="attr_youthexperience" placeholder="Ungdomserfarenhet"></textarea>
+	        </div>
+	    </div>
+	    <div>
+	        <h3 class="whitetext">Nexus Notes</h3>
+	        <p><textarea class="notesarea" name="attr_notesarea"></textarea></p>
+	    </div>
+    </div>
+<!--- Below this is the edge and triq page --->
+    <div class="sheet-section-edge">
+        <br>
+        <!---
+	    <div class="sheet-networks row">
+            <h3 class="economypage">Networks</h3>
+        </div>
+        <div class="sheet-networks flexcontainer3">
+            <div class="networkheadline"><h4>Network</h4></div>
+            <div class="networkheadline"><h4>Contact</h4></div>
+            <div class="networkheadline"><h4>Domain</h4></div>
+            <div class="networkheadline"><h4>Level</h4></div>
+            <div class="networkheadline"><h4>Status</h4></div>
+        </div>
+        <div class="sheet-networks">
+            <div class="sheet-networks row">
                 <fieldset class="repeating_network">
                     <input class="network" type="text" name="attr_networkname"/>
                     <input class="network" type="text" name="attr_contactname"/>
@@ -244,46 +354,14 @@
                 </fieldset>
             </div>
         </div>
-        <div>
-            <br>
-            <span><b>Göm CV & Ungdom: </b></span> 
-            <input class="sheet-showcv" type="checkbox"/>
-            <br>
-	        <div class="sheet-cv row">
-	            <h3>CV</h3>
-                    <fieldset class="repeating_contract">
-                        <p><input class="edgebox" type="text" name="attr_contractname" placeholder="Kontrakt"/></p>
-                        <p><textarea class="experience" name="attr_contractexperience" placeholder="Kontrakterfarenhet"></textarea></p>
-                    </fieldset>
-	        </div>
-	        <br>
-	        <div class="sheet-cv row">
-	            <h3>Ungdom</h3>
-                    <p> Ungdomens nivå: 
-                        <select class="generation" name="attr_youthlevel">
-                            <option>Shacker</option>
-                            <option>Wageslave</option>
-                            <option>Pro</option>
-                            <option>Paladin</option>
-                        </select></p>
-                    <textarea class="experience" name="attr_youthexperience" placeholder="Ungdomsbakgrund"></textarea>
-	        </div>
-	    </div>
-	    <div>
-	        <h3>Nexus Notes</h3>
-	        <p><textarea class="notesarea" name="attr_notesarea"></textarea></p>
-	    </div>
-    </div>
-<!--- Below this is the edge and triq page --->
-    <div class="sheet-section-edge">
 	    <div class="2colrow">
             <div class="col">
                 <br>
-                <h3>Edges</h3>
+                <h4>Edges</h4>
                     <fieldset class="repeating_edges"> 
-                        <p><input class="edgebox" type="text" name="attr_edgename" placeholder="Edgenamn"/> 
+                        <p><input class="edgebox" type="text" name="attr_edgename" placeholder="Edge name"/> 
                         <span>Level: <input type="number" name="attr_edgelevel"/></span> 
-                        <span>Lager: <input type="number" name="attr_edgelayer"/></span>
+                        <span>Layer: <input type="number" name="attr_edgelayer"/></span>
                         </p>
                     </fieldset>
             </div>
@@ -291,37 +369,92 @@
                 <br>
                 <div class="tripflexcontainer">
                     <div class="trip1">
-                        <h3>Sug</h3>
+                        <h4>Desire</h4>
                     </div>
                     <div class="trip2">
-                        <h3>Tripp</h3>
+                        <h4>Trips</h4>
                     </div>
                     <div class="trip3">
-                        <h3>Status</h3>
+                        <h4>Status</h4>
                     </div>
                 </div>
                 <div class="tripflexcontainer2">
                     <fieldset class="repeating_desires">
-                        <input class="trip1" type="text" name="attr_desire1" placeholder="Sug"/>
+                        <input class="trip1" type="text" name="attr_desire1" placeholder="Desire name"/>
                         <input class="trip2" type="text" name="attr_tripname"/>
                         <select class="trip3" name="attr_tripstatus">
-                            <option>Ny</option>
-                            <option>Använd</option>
-                            <option>Sliten</option>
-                            <option>Utbränd</option>
+                            <option>New</option>
+                            <option>Used</option>
+                            <option>Worn</option>
+                            <option>Burnt out</option>
                         </select>
                     </fieldset>
                 </div>
             </div>
         </div>
+        --->
         <div class="row">
             <br>
-            <h3>Triqs</h3>
+            <span>Göm hacking</span>
+            <input class="sheet-hidehacking" type="checkbox"/>
+            <div class="nohacking">
+                <h4 class="whitetext">Hacking</h4>
+                <p><b>Personlig stack: </b>
+                    <input type="number" class="personalstack" name="attr_personalstack"/>
+                    <span><b>Privat IS</b>
+                        <input type="number" class="privateis" name="attr_privateis"/>
+                        <button type="roll" class="privateisbutton" name="roll_privateis" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{privateis} + ?{Modifier|0} + @{rollmodifier}"/>
+                    </span>
+                    <span><b>Leecha stack</b>
+                        <input type="number" class="privateis" name="attr_leechstack"/>
+                        <button type="roll" class="leechstackbutton" name="roll_leech" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{cortex} + ?{Modifier|0} + @{rollmodifier}"/>
+                    </span>
+                    <span><b>Tulpa: </b>
+                        <select class="hacklevel" name="attr_tulpalevel">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </span>
+                </p>
+                <h5 class="whitetext">Sploits/Daemons</h5>
+                    <fieldset class="repeating_hacking">
+                        <p>
+                            <input class="hackname" type="text" name="attr_hackname" placeholder="Sploit/daemon-namn"/>
+                            <span>Level: 
+                                <select class="hacklevel" name="attr_hacklevel">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </span>
+                            <span>#0D
+                                <input type="checkbox" class="zeroday" name="attr_zeroday"/>
+                            </span>
+                            <span>Typ:
+                                <input type="text" class="hacktype" name="attr_hacktype" placeholder="Sploit/daemon-typ"/>
+                            </span>
+                            <span>Kostnad: 
+                                <input type="number" class="hackcost" name="attr_hackcost"/>
+                            </span>
+                            <span>
+                                <input type="text" class="triqdesc" name="attr_hackdesc" placeholder="Sploit/daemon-beskrivning"/>
+                            </span>
+                        </p>
+                    </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <h4 class="whitetext">Triqs</h4>
                 <fieldset class="repeating_triqs"> 
                 <p><input class="triqname" type="text" name="attr_triqname" placeholder="Triqnamn"/> 
                 <span>Kostnad: <input class="triqcost" type="text" name="attr_triqcost"/></span>
                 <span>Edge: <input class="triqedge" type="text" name="attr_triqedge"/></span> </p>
-                <textarea class="triqdesc" type="text" name="attr_triqdesc"></textarea>
+                <textarea class="triqdesc" type="text" name="attr_triqdesc" placeholder="Triqbeskrivning"></textarea>
                 </fieldset>
         </div>
     </div>
@@ -330,9 +463,8 @@
         <div>
             <div class="row">
                 <br>
-                <h3>Vapen</h3>
+                <h3 class="whitetext">Vapen</h3>
                     <fieldset class="repeating_weapons">
-                        <br>
                         <div class="repeating-weapons">
                             <p>
                                 <input class="weaponname" type="text" name="attr_weapon-name" placeholder="Vapennamn"/>
@@ -363,23 +495,20 @@
                             <p>
                                 <input class="weaponpropertybox" type="text" name="attr_weapon-property" placeholder="Vapenegenskaper"/>
                             </p>
-                            <br>
                         </div>
                     </fieldset>
             </div>
             <div class="row">
                 <br>
-                <h3>Eqip</h3>
-                <br>
+                <h3 class="whitetext">Eqip</h3>
                 <fieldset class="repeating_eqip">
                     <div class="repeating-weapons">
-                        <br>
                         <p>
-                            <input class="weaponname" type="text" name="attr_eqip-name" placeholder="Eqip name"/> 
+                            <input class="weaponname" type="text" name="attr_eqip-name" placeholder="Eqipnamn"/> 
                             <span>Auto: <input class="attribute2" type="number" name="attr_eqip-auto"/></span>
                             <span>Sign: <input class="attribute2" type="number" name="attr_eqip-sign"/></span>
                             <span> Kvalitet: <input class="textbox" type="text" name="attr_eqip-quality"/>  
-                            <span><input type="text" name="attr_eqip-property" placeholder="Egenskaper"/></span>
+                            <span><input class="eqipproperty" type="text" name="attr_eqip-property" placeholder="Egenskaper"/></span>
                         </p>
                         <br>
                     </div>
@@ -387,18 +516,16 @@
             </div>
             <div class="row">
                 <br>
-                <h3>Augments</h3>
-                <br>
+                <h3 class="whitetext">Augments</h3>
                 <fieldset class="repeating_augment">
                     <div class="repeating-weapons">
-                        <br>
                         <p>
-                            <input class="weaponname" type="text" name="attr_aug-name" placeholder="Augment namn"/>
+                            <input class="weaponname" type="text" name="attr_aug-name" placeholder="Augmentnamn"/>
                             <span> Slot: <input class="textbox" type="text" name="attr_aug-slot"/></span> 
                             <span>Auto: <input class="attribute2" type="number" name="attr_aug-auto"/></span>
                             <span>Sign: <input class="attribute2" type="number" name="attr_augsign"/></span>
                             <span> Kvalitet: <input class="textbox" type="text" name="attr_aug-quality"/></span>  
-                            <span><input type="text" name="attr_aug-property" placeholder="Augmentegenskaper"/></span>
+                            <span><input class="eqipproperty" type="text" name="attr_aug-property" placeholder="Augmentegenskaper"/></span>
                         </p>
                         <br>
                     </div>
@@ -410,7 +537,7 @@
 <!--- Below this is the trauma page --->
     <div class="sheet-section-trauma">
         <br>
-        <h1 class="traumacard">Traumakort</h1>
+        <h1 class="traumacard whitetext">Traumakort</h1>
         <br>
         <div>
             <p><b>Förvärring:</b>
@@ -445,7 +572,7 @@
         <div class = "2colrow">
             <div class="col">
                 <div>
-                    <h2>Huvud 
+                    <h2 class="whitetext">Huvud 
                         <span class="augmenthead"> A: 
                             <input class="augment3" type='checkbox' name='attr_headaugment' value='1'/>
                         </span>
@@ -534,7 +661,7 @@
             </div>
             <div class="col">
                 <div>
-                    <h2>Torso
+                    <h2 class="whitetext">Torso
                         <span class="augmenthead"> A: <input class="augment3" type='checkbox' name='attr_torsoaugment' value='1'/></span>
                     </h2>
                     <p>Skydd: <input class="attribute2" type="number" name="attr_prottorso"/></p>
@@ -617,7 +744,7 @@
         <div class = "2colrow">
             <div class = "col">
                 <div>
-                    <h2>Armar
+                    <h2 class="whitetext">Armar
                         <span class="augmenthead"> Vänsterarm A: <input class="augment3" type='checkbox' name='attr_armaugment' value='1'/></span>
                         <span class="augmenthead"> Högerarm A: <input class="augment3" type='checkbox' name='attr_rarmaugment' value='1'/></span>
                     </h2>
@@ -704,7 +831,7 @@
             </div>
             <div class = "col">
                 <div>
-                    <h2>Ben
+                    <h2 class="whitetext">Ben
                         <span class="augmenthead"> Vänster ben A: <input class="augment3" type='checkbox' name='attr_llegaugment' value='1'/></span>
                         <span class="augmenthead"> Höger ben A: <input class="augment3" type='checkbox' name='attr_llegaugment' value='1'/></span>
                     </h2>
@@ -791,7 +918,7 @@
             </div>
         </div>
         <div class="row">
-            <h3 class="ultra">53+: ULTRA!!! <span>#Pen+1 & +1 extraskada, -10 trauma</span></h3>
+            <h3 class="ultra whitetext">53+: ULTRA!!! <span>#Pen+1 & +1 extraskada, -10 trauma</span></h3>
         </div>
         <br>
      <!---
@@ -857,86 +984,90 @@
         <br>
         <div>
             <div class="row">
-                <h2 class="economypage">Ekonomi</h2>
+                <h2 class="economypage whitetext">Ekonomi</h2>
             </div>
             <br>
             <div>
                 <p>€: <input class="coin" type="text" name="attr_money"/>
-                    <span> Kontant: <input class="coin" type="text" name="attr_cash"/></span>
+                    <span> Cash: <input class="coin" type="text" name="attr_cash"/></span>
                     <span> Coin: <input class="coin" type="text" name="attr_coin"/></span>
                     <span> Nettoinkomst: <input class="totaleconomy" type="number" name="attr_netincome" value="(@{totalincome2} - @{totalexpense2})" disabled="true"/></span>
                 </p>
             </div>
         </div>
-            <div class="incomeboxstart">
-                <div class="incomeboxstart2">
-                    <h3>Inkomster</h3>
-                </div>
-                <div class="incomeboxstart2">
-                    <h3>Utgifter</h3>
-                </div>
-                <div class="incomeboxstart2">
-                    <h3>Laglig skuld</h3>
-                </div>
-                <div class="incomeboxstart2">
-                    <h3>Olaglig skuld</h3>
-                </div>
+        <br>
+        <span>Göm liggare: </span> 
+        <input class="sheet-badledger" type="checkbox"/>
+        <br>
+        <div class="hide-ledger incomeboxstart">
+            <div class="incomeboxstart2">
+                <h3 class="whitetext">Inkomster</h3>
             </div>
-        <div class="flexcontainer2">
+            <div class="incomeboxstart2">
+                <h3 class="whitetext">Utgifter</h3>
+            </div>
+            <div class="incomeboxstart2">
+                <h3 class="whitetext">Laglig skuld</h3>
+            </div>
+            <div class="incomeboxstart2">
+                <h3 class="whitetext">Olaglig skuld</h3>
+            </div>
+        </div>
+        <div class="hide-ledger flexcontainer2">
 <!--- income column below --->
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource1"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount1" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource1" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount1" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource2"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount2" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource2" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount2" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource3"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount3" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource3" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount3" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource4"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount4" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource4" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount4" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource5"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount5" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource5" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount5" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource6"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount6" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource6" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount6" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_incomesource7"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_incomeamount7" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_incomesource7" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_incomeamount7" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
@@ -944,56 +1075,56 @@
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource1"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount1" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource1" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount1" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource2"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount2" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource2" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount2" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource3"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount3" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource3" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount3" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource4"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount4" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource4" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount4" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource5"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount5" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource5" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount5" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource6"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount6" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource6" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount6" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_expensesource7" value="Ränta"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_expenseamount7" value="((@{totalledebt2}/100)+(@{totalildebt2}/10))" disabled="true"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_expensesource7" value="Ränta"/>
+                        <span><input class="incomeamount" type="number" name="attr_expenseamount7" value="((@{totalledebt2}/100)+(@{totalildebt2}/10))" disabled="true"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
@@ -1001,56 +1132,56 @@
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource1"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount1" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource1" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount1" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource2"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount2" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource2" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount2" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource3"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount3" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource3" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount3" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource4"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount4" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource4" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount4" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource5"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount5" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource5" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount5" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource6"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount6" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource6" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount6" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ledebtsource7"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ledebtamount7" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ledebtsource7" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ledebtamount7" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
@@ -1059,96 +1190,96 @@
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource1"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount1" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource1" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount1" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource2"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount2" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource2" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount2" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Source: <input class="textbox" type="text" name="attr_ildebtsource3"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount3" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource3" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount3" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource4"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount4" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource4" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount4" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource5"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount5" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource5" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount5" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource6"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount6" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource6" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount6" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
             <div class="incomebox">
                 <div class="incomebox2">
                     <br>
-                    <p>Källa: <input class="textbox" type="text" name="attr_ildebtsource7"/>
-                        <span>€<input class="incomeamount" type="number" name="attr_ildebtamount7" value="0"/></span>
+                    <p><input class="incometextbox" type="text" name="attr_ildebtsource7" placeholder="Källa"/>
+                        <span><input class="incomeamount" type="number" name="attr_ildebtamount7" value="0"/> <b>€</b></span>
                     </p>
                 </div>
             </div>
         </div>
 <!--- End of input boxes --->
 <!--- Below are the autocalculating boxes --->
-        <div class="flexcontainer">
+        <div class="hide-ledger flexcontainer">
             <div class="incomebox3">
                 <br>
-                <p>  Inkomst: <input class="totaleconomy" type="number" name="attr_totalincome2" value="(@{incomeamount1} + @{incomeamount2} + @{incomeamount3} + @{incomeamount4} + @{incomeamount5} + @{incomeamount6} + @{incomeamount7})" disabled="true"/></p>
+                <p class="totalamounttext">  <b>Inkomst:</b> <input class="totaleconomy" type="number" name="attr_totalincome2" value="(@{incomeamount1} + @{incomeamount2} + @{incomeamount3} + @{incomeamount4} + @{incomeamount5} + @{incomeamount6} + @{incomeamount7})" disabled="true"/> <b>€</b></p>
             </div>
             <div class="incomebox3">
                 <br>
-                <p> Utgift: <input class="totaleconomy" type="number" name="attr_totalexpense2" value="(@{expenseamount1} + @{expenseamount2} + @{expenseamount3} + @{expenseamount4} + @{expenseamount5} + @{expenseamount6} + @{expenseamount7})" disabled="true"/></p>
+                <p class="totalamounttext"> <b>Utgifter:</b> <input class="totaleconomy" type="number" name="attr_totalexpense2" value="(@{expenseamount1} + @{expenseamount2} + @{expenseamount3} + @{expenseamount4} + @{expenseamount5} + @{expenseamount6} + @{expenseamount7})" disabled="true"/> <b>€</b></p>
             </div>
             <div class="incomebox3">
                 <br>
-                <p>  Laglig skuld: <input class="totaleconomy" type="number" name="attr_totalledebt2" value="(@{ledebtamount1} + @{ledebtamount2} + @{ledebtamount3} + @{ledebtamount4} + @{ledebtamount5} + @{ledebtamount6} + @{ledebtamount7})" disabled="true"/></p>
+                <p class="totalamounttext">  <b>Laglig skuld:</b> <input class="totaleconomy" type="number" name="attr_totalledebt2" value="(@{ledebtamount1} + @{ledebtamount2} + @{ledebtamount3} + @{ledebtamount4} + @{ledebtamount5} + @{ledebtamount6} + @{ledebtamount7})" disabled="true"/> <b>€</b></p>
             </div>
             <div class="incomebox3">
                 <br>
-                <p>  Olaglig skuld: <input class="totaleconomy" type="number" name="attr_totalildebt2" value="(@{ildebtamount1} + @{ildebtamount2} + @{ildebtamount3} + @{ildebtamount4} + @{ildebtamount5} + @{ildebtamount6} + @{ildebtamount7})" disabled="true"/></p>
+                <p class="totalamounttext">  <b>Olaglig skuld:</b> <input class="totaleconomy" type="number" name="attr_totalildebt2" value="(@{ildebtamount1} + @{ildebtamount2} + @{ildebtamount3} + @{ildebtamount4} + @{ildebtamount5} + @{ildebtamount6} + @{ildebtamount7})" disabled="true"/> <b>€</b></p>
             </div>
         </div>
         <br>
 <!--- End of the autocalculating boxes & beginning of downtime --->
         <div class="economypage">
             <div class="row">
-                <h2>Downtime</h2>
+                <h2 class="whitetext">Downtime</h2>
             </div>
         </div>
         <div class="flexcontainer4">
             <div class="downtime1">
-                <h3>Aktivitet</h3>
+                <h3 class="whitetext">Aktivitet</h3>
             </div>
             <div class="downtime2">
-                <h3>Gainz</h3>
+                <h3 class="whitetext">Gainz</h3>
             </div>
             <div class="downtime3">
-                <h3>Misc</h3>
+                <h3 class="whitetext">Misc</h3>
             </div>
         </div>
         <div class="flexcontainer4">
@@ -1310,7 +1441,7 @@
         <br>
             <div class="3colrow">
                 <div class="col">
-                    <h3>Strid</h3>
+                    <h3 class="whitetext">Strid</h3>
                     <p>Initiativ: 
                         <input class="combattext" type="number" name="attr_initiative"/> 
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{initiative} + ?{Modifier|0} + @{rollmodifier}" name="roll_initiative"></button> 
@@ -1336,7 +1467,7 @@
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{shock} + ?{Modifier|0}" name="roll_shock"></button> 
                     </p>
                     <br>
-                    <h3>Misc</h3>
+                    <h3 class="whitetext">Misc</h3>
                     <p class="misc">Tripp: 
                         <input class="combattext" type="number" name="attr_tripp"/>
                         <button class="combatbutton" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{tripp} + ?{Modifier|0}" name="roll_tripp"></button>
@@ -1355,7 +1486,7 @@
                     <br>
                 </div>
                 <div class="col">
-                    <h3>Flow</h3>
+                    <h3 class="whitetext">Flow</h3>
                     <p>Flow: 
                         <input class="flowbox" type="number" name="attr_flow" value="12" />
                     </p>
@@ -1378,7 +1509,7 @@
                     </p>
                 </div>
                 <div class="col">
-                    <h3>Attribut</h3>
+                    <h3 class="whitetext">Attribut</h3>
                     <p class="attribute2">Flex: 
                         <input class="attribute" type="number" name="attr_flex"/>
                         <button class="attributeroll" type="roll" value="/roll {2d10 + ?{Flow|0}d10}kh2 + @{flex} + ?{Modifier|0} + @{rollmodifier}" name="roll_flex"></button>
@@ -1423,7 +1554,7 @@
             </div>
         <div class="row">
             <br>
-            <h3>Vapen</h3>
+            <h3 class="whitetext">Vapen</h3>
             <fieldset class="repeating_weapons">
                 <br>
                 <div class="repeating-weapons">
