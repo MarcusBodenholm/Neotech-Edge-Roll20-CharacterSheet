@@ -66,16 +66,21 @@
 }
 /*----------- End Tab Setup -----------*/
 
-/* Making Covski happy, I guess */
-.charsheet input.sheet-fi1:checked + span.sheet-faceinjury {
-    color:#ff0000;
-}
-
-
+/* Hiding buttons */
 input.sheet-showcv:checked ~ div.sheet-cv {
     display: none;
 }
 
+input.sheet-hidenetworks:checked ~ div.sheet-networks {
+    display: none;
+}
+
+input.sheet-hidehacking:checked ~ div.sheet-nohacking {
+    display: none;
+}
+input.sheet-badledger:checked ~ div.sheet-hide-ledger {
+    display: none;
+}
 .sheet-traumainfo {
     display: none;
 }
@@ -83,15 +88,37 @@ input.sheet-showcv:checked ~ div.sheet-cv {
 input.sheet-showtrauma:checked ~ div.sheet-traumainfo {
     display: block;
 }
+/* General settings   */
 
-.repcontainer {
-    width:800px;
-}
 .repcontainer[data-groupname="repeating_edges"] {
     width: 400px;
 }
 .repcontainer[data-groupname="repeating_desires"] {
     width: 400px;
+}
+input[type="text"] {
+    color:#000000;
+}
+input[type="number"] {
+    color:#000000;
+}
+textarea {
+    color:#000000;
+}
+select {
+    color:#000000;
+}
+.charsheet {
+    background-image: 
+        linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://i.imgur.com/DXv8R3w.png");
+    color:#ffffff;
+}
+.sheet-whitetext {
+    color:#ffffff;
 }
 
 
@@ -104,189 +131,26 @@ input.sheet-showtrauma:checked ~ div.sheet-traumainfo {
 .sheet-row {
     width:830px;
 }
-
-/*
-.sheet-general,
-.sheet-trauma,
-.sheet-edge,
-.sheet-triq.
-.sheet-economy{
-	display: none;
+.repcontainer {
+    width:800px;
 }
 
- show the selected tab 
-.sheet-tabstoggle[value="general"] ~ div.sheet-general,
-.sheet-tabstoggle[value="trauma"] ~ div.sheet-trauma,
-.sheet-tabstoggle[value="triq"] ~ div.sheet-triq,
-.sheet-tabstoggle[value="edge"] ~ div.sheet-edge,
-.sheet-tabstoggle[value="economy"] ~ div.sheet-economy,{
-	display: block;
-}
-*/
+/* General page  */
 
-/*
-.sheet-character-sheet { display: none; }
-
-.sheet-isgeneral:checked ~ .sheet-general,
-.sheet-isedge:checked ~ .sheet-edge,
-.sheet-istrauma:checked ~ .sheet-trauma,
-.sheet-iseqip:checked ~ .sheet-eqip,
-.sheet-iseconomy:checked ~ .sheet-economy,
-{
-    display: block;
-}
-*/
-.sheet-flexcontainer {
+.sheet-charactercontainer {
     display: flex;
     width: 800px;
+    height: 150px;
 }
-.sheet-bonusactivity {
-    height: 20px;
-    width: 75px;
-}
-.sheet-flexcontainer2 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 415px;
-    width: 800px;
-}
-
-.sheet-flexcontainer>h3 {
-    background-color: #f1f1f1;
-    width: 196px;
-    border: 2px solid black;
-    text-align: center;
-}
-.sheet-flexcontainer3 {
-    display: flex;
-    width: 800px;
-}
-.sheet-flexcontainer3>h3 {
-    background-color: #f1f1f1;
-    width: 180px;
-    border: 2px solid black;
-    text-align: center;
-}
-.sheet-flexcontainer4 {
-    width: 800px;
-    display:flex;
-}
-.sheet-downtime1 {
-    width:80px;
-}
-.sheet-downtime2 {
-    width:100px;
-}
-.sheet-downtime3 {
+.sheet-nameage {
     width:350px;
 }
-/*
-.sheet-flexcontainer2>fieldset {
-    width: 200px;
-}
-.sheet-network {
-    width: 156px;
-}
-.sheet-networkbox2 {
-    height: 28px;
-    width: 156px;
-    border: 2px solid black;
-}
-.sheet-networkbox {
-    width: 160px;
-}
-.sheet-networkbox>fieldset {
-    display: flex;
-    flex-direction:row;
-    
-}
-
-*/
-
-.sheet-network {
-    width: 157px;
-    border: 2px solid black;
-    height: 26px;
-}
-.sheet-network2 {
-    width: 157px;
-    border: 2px solid black;
-    height: 30px;
-}
-
-.sheet-economypage {
-    left:400px;
-    text-align:center;
-}
-.sheet-incomeboxstart {
-    display:flex;
-    width: 800px;
-    height:40px;
-    flex-wrap: wrap;
-    flex-direction:row;
-}
-.sheet-incomeboxstart2 {
-    width:196px;
-    border: 2px solid black;
-    text-align:center;
-}
-.sheet-incomebox {
-    width: 200px;
-}
-.sheet-incomebox2 {
-    border: 2px solid black;
-}
-.sheet-incomebox3 {
-    border: 2px solid black;
-    width: 196px;
-}
-
-input[type="text"].sheet-weaponpropertybox {
-    width: 80%;
-}
-input[type="text"].sheet-coin {
-    width:100px;
-}
-
-.sheet-body {
-    font:"lato-light";
-}
-.sheet-repeating-weapons {
-    border-bottom: 1px solid black;
-}
-
-input[type="number"].sheet-incomeamount {
-    width: 65px;
-}
-input[type="number"].sheet-totaleconomy {
-    width: 100px;
-}
 input[type="text"].sheet-stylepersonality {
-    left: 115px;
+    left: 120px;
     width: 250px;
     height:27px;
     position: absolute;
     margin:-3px;
-}
-
-.sheet-weaponname {
-    width: 15%;
-}
-.sheet-ultra {
-    text-align: center;
-    font-style: bold;
-}
-.sheet-dontask {
-    color: white;
-    visibility:hidden;
-}
-input[type="text"].sheet-textbox {
-    width: 70px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    
 }
 input[type="number"].sheet-agebox {
     height: 25px;
@@ -306,7 +170,219 @@ input[type="number"].sheet-attribute {
 .sheet-attribute2 {
     height: 20px;
 }
+.sheet-generation {
+    width: 85px;
+}
+.sheet-generation2 {
+    width: 85px;
+    position: absolute;
+    left:480px;
+    margin:-6px;
+    height:25px;
+}
 
+.sheet-jenkem {
+    width: 350px;
+    height: 60px;
+    resize: none;
+}
+
+.sheet-experience {
+    height: 20px;
+    width: 800px;
+    resize:vertical;
+}
+.sheet-attribute {
+    position: absolute;
+    left: 665px;
+}
+.sheet-attributeroll {
+    position: absolute;
+    left: 705px;
+    margin:-10px;
+    height:17px;
+}
+
+.sheet-combatbutton {
+    position: absolute;
+    left: 175px;
+    margin:-10px;
+    height:17px;
+}
+
+.sheet-combattext {
+    position: absolute;
+    left: 135px;
+}
+
+input[type="number"].sheet-combattext {
+    height: 25px;
+    width: 40px;
+}
+input[type="number"].sheet-flowbox {
+    height: 25px;
+    width: 40px;
+}
+.sheet-flowbox {
+    position: absolute;
+    left: 390px;
+    margin:-4px;
+}
+.sheet-tripflexcontainer {
+    display: flex;
+    width: 420px;
+    position:relative;
+}
+.sheet-trip1 {
+    width: 100px;
+}
+.sheet-trip2 {
+    width: 160px;  
+}
+input[type="text"].sheet-trip2 {
+    width: 150px;  
+}
+.sheet-trip3 {
+    width: 100px;
+}
+.sheet-economypage {
+    left:400px;
+    text-align:center;
+}
+.sheet-networkheadline {
+    width: 165px;
+    text-align:center;
+    border: 1px solid white;
+}
+.sheet-network {
+    width: 159px;
+    border: 1px solid white;
+    height: 26px;
+    margin-right:-2px;
+}
+.sheet-network2 {
+    width: 157px;
+    padding-top: 1px;
+    border: 1px solid white;
+    height: 30px;
+}
+.sheet-misc {
+    height: 20px;
+}
+
+input[type="text"].sheet-edgebox {
+    width: 150px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.sheet-notesarea {
+    width:800px;
+    resize:vertical;
+}
+
+/* end of first page and beginning of Triq page  */
+.sheet-hacklevel {
+    width: 40px;
+}
+input[type="text"].sheet-triqedge {
+    width: 80px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+input[type="text"].sheet-triqcost {
+    width: 50px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.sheet-triqdesc {
+    width: 800px;
+    height:40px;
+    resize:vertical;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+input[type="text"].sheet-triqname {
+    width: 140px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* End of Triq page and beginning of Eqip page  */
+
+.sheet-weaponname {
+    width: 15%;
+}
+input[type="text"].sheet-weaponpropertybox {
+    width: 80%;
+}
+.sheet-repeating-weapons {
+}
+.sheet-eqipproperty {
+    width:300px;
+}
+.sheet-repeating_eqip, .sheet-repeating_weapons, .sheet-repeating_augment {
+    width: 400px;
+}
+/* End of eqip and beginning of Trauma page  */
+.sheet-complication {
+    width:85px;
+}
+.sheet-flexcontainer {
+    display: flex;
+    width: 800px;
+}
+.sheet-neuroheader {
+    width: 140px;
+    text-align:center;
+}
+.sheet-divTable{
+	display: table;
+	width: 350px;
+}
+.sheet-divTableRow {
+	display: table-row;
+	width: 10px;
+	height:1px;
+}
+.sheet-divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.sheet-divTableCell, .sheet-divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.sheet-divTableCell {
+    height:10px;
+}
+.sheet-divTableCell2 {
+    border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+    visibility:hidden;
+}
+.sheet-divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.sheet-divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.sheet-divTableBody {
+	display: table-row-group;
+}
 .sheet-injurytext {
     font-size: 10px;
 }
@@ -350,96 +426,14 @@ input[type="number"].sheet-attribute {
     position: absolute;
     left: 400px;
 }
-.sheet-misc {
-    height: 20px;
+.sheet-ultra {
+    text-align: center;
+    font-style: bold;
 }
-
-input[type="text"].sheet-edgebox {
-    width: 150px;
-    top: 0;
-    left: 0;
-    z-index: 2;
+.sheet-dontask {
+    color: white;
+    visibility:hidden;
 }
-input[type="text"].sheet-triqedge {
-    width: 80px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    
-}
-
-input[type="text"].sheet-triqcost {
-    width: 50px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.sheet-triqdesc {
-    width: 800px;
-    height:40px;
-    resize:vertical;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-input[type="text"].sheet-triqname {
-    width: 140px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.sheet-attribute {
-    position: absolute;
-    left: 700px;
-}
-.sheet-attributeroll {
-    position: absolute;
-    left: 740px;
-    margin:-10px;
-    height:17px;
-}
-
-.sheet-combatbutton {
-    position: absolute;
-    left: 191px;
-    margin:-10px;
-    height:17px;
-}
-
-.sheet-combattext {
-    position: absolute;
-    left: 150px;
-}
-
-input[type="number"].sheet-combattext {
-    height: 25px;
-    width: 40px;
-}
-input[type="number"].sheet-flowbox {
-    height: 25px;
-    width: 40px;
-}
-.sheet-flowbox {
-    position: absolute;
-    left: 400px;
-    margin:-4px;
-}
-.sheet-table, th, td {
-  border: 1px solid black;
-}
-.sheet-table {
-    width: 100%;
-}
-.sheet-td {
-    width: 5%;
-    height: 5%;
-}
-.sheet-th {
-    width: 50%;
-}
-
 .sheet-traumashockbutton {
     vertical-align: middle;
 }
@@ -473,115 +467,6 @@ input[type="checkbox"].sheet-neuro:checked + span::before {
     font-family: "pictos";
     content: url(https://i.imgur.com/u9Bi24j.jpg);
 }
-
-/* DivTable.com */
-.sheet-divTable{
-	display: table;
-	width: 350px;
-}
-
-.sheet-divTableRow {
-	display: table-row;
-	width: 10px;
-	height:1px;
-}
-
-.sheet-divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-}
-
-.sheet-divTableCell, .sheet-divTableHead {
-	border: 1px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
-}
-.sheet-divTableCell {
-    height:10px;
-}
-.sheet-divTableCell2 {
-    border: 1px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
-    visibility:hidden;
-}
-
-.sheet-divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
-}
-
-.sheet-divTableFoot {
-	background-color: #EEE;
-	display: table-footer-group;
-	font-weight: bold;
-}
-
-.sheet-divTableBody {
-	display: table-row-group;
-}
-
-.sheet-generation {
-    width: 85px;
-}
-.sheet-generation2 {
-    width: 85px;
-    position: absolute;
-    left:480px;
-    margin:-6px;
-    height:25px;
-}
-
-.sheet-jenkem {
-    width: 350px;
-    height: 60px;
-    resize: none;
-}
-
-.sheet-experience {
-    height: 20px;
-    width: 800px;
-    resize:vertical;
-}
-
-.sheet-tripflexcontainer {
-    display: flex;
-    width: 420px;
-    position:relative;
-}
-.sheet-trip1 {
-    width: 100px;
-}
-.sheet-trip2 {
-    width: 160px;  
-}
-input[type="text"].sheet-trip2 {
-    width: 150px;  
-}
-.sheet-trip3 {
-    width: 100px;
-}
-.sheet-charactercontainer {
-    display: flex;
-    width: 800px;
-    height: 150px;
-
-}
-.sheet-nameage {
-    width:350px;
-
-}
-.sheet-repeating_eqip, .sheet-repeating_weapons, .sheet-repeating_augment {
-    width: 400px;
-}
-.sheet-notesarea {
-    width:800px;
-    resize:vertical;
-}
-.sheet-complication {
-    width:85px;
-}
 .sheet-traumainfotext {
     width: 800px;
 }
@@ -589,7 +474,123 @@ input[type="text"].sheet-trip2 {
     width: 150px;
     text-align: center;
 }
-.sheet-neuroheader {
-    width: 140px;
+/* End of trauma page and beginning of Economy page  */
+
+.sheet-bonusactivity {
+    height: 20px;
+    width: 75px;
+}
+.sheet-flexcontainer2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 800px;
+}
+
+.sheet-flexcontainer>h3 {
+    background-color: #f1f1f1;
+    width: 196px;
+    border: 2px solid white;
+    text-align: center;
+}
+.sheet-flexcontainer3 {
+    display: flex;
+    width: 800px;
+}
+.sheet-flexcontainer3>h3 {
+    background-color: #f1f1f1;
+    width: 180px;
+    border: 2px solid white;
+    text-align: center;
+}
+.sheet-flexcontainer4 {
+    width: 800px;
+    display:flex;
+}
+.sheet-downtime1 {
+    width:80px;
+}
+.sheet-downtime2 {
+    width:100px;
+}
+.sheet-downtime3 {
+    width:350px;
+}
+
+.sheet-incomeboxstart {
+    display:flex;
+    width: 800px;
+    height:40px;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+.sheet-incomeboxstart2 {
+    width:196px;
+    border: 2px solid white;
     text-align:center;
 }
+.sheet-incomebox {
+    width: 200px;
+}
+.sheet-incomebox2 {
+    border: 1px solid white;
+        height: 50px;
+}
+.sheet-incomebox3 {
+    border: 1px solid white;
+    width: 200px;
+    margin-top:-36px;
+}
+.sheet-totalamounttext {
+    height:35px;
+    margin-left:5px;
+}
+
+input[type="text"].sheet-coin {
+    width:100px;
+}
+
+input[type="number"].sheet-incomeamount {
+    width: 90px;
+    margin-bottom:5px;
+}
+input[type="number"].sheet-totaleconomy {
+    width: 90px;
+}
+
+
+input[type="text"].sheet-textbox {
+    width: 70px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+input[type="text"].sheet-incometextbox {
+    width: 70px;
+    top: 0;
+    left: 0;
+    margin-left:5px;
+    margin-bottom:5px;
+    z-index: 2;
+    
+}
+
+/* End of economy page */
+
+/*
+.sheet-table, th, td {
+  border: 1px solid black;
+}
+.sheet-table {
+    width: 100%;
+}
+.sheet-td {
+    width: 5%;
+    height: 5%;
+}
+.sheet-th {
+    width: 50%;
+}
+ DivTable.com */
