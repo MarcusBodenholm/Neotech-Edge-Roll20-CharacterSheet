@@ -52,7 +52,7 @@
                                 <option>Presplit</option>
                             </select>
                         </p>
-                    </div>    
+                    </div>   
                     <div class="lifehealth">
                         <p> <b>Sphere: </b>
                             <select class="generation2" name="attr_sphere">
