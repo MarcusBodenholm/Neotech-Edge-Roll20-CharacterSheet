@@ -1,3 +1,3 @@
-# Neotech-Edge-Roll20-formul-r
-Ett karaktärsblad/formulär för användning i Roll20. 
-I Roll20, gå in på Settings > Game Settings och längst ner under  Character Sheet Template välj Custom. Klistra in HTML & CSS från respektive fil in i respektive fält. 
+# Neotech-Edge-Roll20-CharacterSheet
+A character sheet for use in Roll20 (Swedish Only)
+Go to Roll20. Choose a game, then go to Settings > Game Settings. Furthest down under Character Sheet Template, select Custom. Paste the HTML & CSS from the corresponding file. 
