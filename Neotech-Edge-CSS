@@ -1,7 +1,7 @@
 /*----------- Tabs Setup -------------*/
 
 /*this hides the contents of each tab by default*/
-.charsheet div[class^="sheet-section"] { 	
+.charsheet div[class^="sheet-section"] { 
 	display: none;
 }
 
